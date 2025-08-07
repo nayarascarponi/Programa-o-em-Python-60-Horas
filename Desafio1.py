@@ -1,156 +1,94 @@
-# ***Desafio 1:  Condicionais***
+ ## ***ATIVIDADE 1***
 
-# ***Sistema de Reservas de Hotel:***
+# 1 - Faça um programa, utilizando ***while***, que mostre na tela os números de 0 a 1000.
 
-# ***Você foi contratado(a) para desenvolver uma parte do sistema de um hotel. O objetivo é criar um sistema que gerencie reservas de quartos e o pagamento das diárias***.
+# c = 0
+# while c <=1000:
+#     print(c)
+#     c = c +1
 
-# - *Cadastro de Cliente:*
-# *O sistema deve permitir que o usuário "cadastre" o nome e a idade de até 3 clientes.*
-
-
-# - *Reservas de Quartos:*
-
-# ***O sistema deve oferecer 3 tipos de quartos:*** 
-
-# ***"Simples", "Duplo" e "Luxo".***
-
-# ***Cada cliente deve escolher um quarto para sua estadia.
-# O preço da diária varia conforme o tipo de quarto:
-# Simples: R$ 100,00 por dia.
-# Duplo: R$ 150,00 por dia.
-# Luxo: R$ 250,00 por dia.***
-
-# - ***Cálculo da Estadia:***
-
-# ***O usuário deve informar quantos dias cada cliente ficará no hotel.
-# O sistema deve calcular o valor total da estadia para cada cliente, considerando o tipo de quarto e a quantidade de dias.***
-
-# Exemplo: 
-
-#  ***valor_cliente3 = preco_duplo * cliente3_dias***
-
-# *Pagamento:*
-
-# *O sistema deve exibir o valor total a ser pago por cada cliente.*
-
-# *Regras Adicionais:
-# **Utilize apenas variáveis, condicionais (if, elif, else) e listas para resolver o desafio.***
+# 2 -  Faça um sistema, utilizando ***while e listas***, que permita o usuário escrever o nome de 10 pessoas e os mostre na tela.
 
 
+# n = 0
+# nomes= []
 
-
-print( 'HOTEL PYTHON - Reserva de Hospedagem ')
-print( )
-
-
-meu_carrinho = []
-total_valores = []
-diarias_totais = []
-tipos_quartos = ['', 'Simples' , 'Duplo', 'Luxo']
-valores = ['', 100.0, 150.0, 250.0 ]
-
-
-cadastro1 = input('Digite o nome do hóspede 1:  ')
-idade1= input('Digite a idade do hospede 1: ')
-
-
-cadastro2 = input ('Digite o nome do hóspede 2: ')
-idade2= input('Digite a idade do hospede 2: ')
-
-
-cadastro3 = input ('Digite o nome do hóspede 3: ')
-idade3= input('Digite a idade do hospede 3: ')
-
-
-
-
-print(f'''Tipos de quarto:
-      {tipos_quartos[1] } R$ {valores [1]}
-      {tipos_quartos[2] } R$ {valores [2]}
-      {tipos_quartos[3] } R$ {valores [3]}
-
-
-''')
-
-escolha1 = input(f'Escolha o quarto para o hóspede {cadastro1}:' )
-
-if escolha1 == 'Simples':
-    meu_carrinho.append(tipos_quartos[1])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [1]
-    total_valores.append(diarias)
+# while n <=10:
     
-elif escolha1 == 'Duplo':
-    meu_carrinho.append(tipos_quartos[2])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [2]
-    total_valores.append(diarias)
-elif escolha1 == 'Luxo':
-    meu_carrinho.append(tipos_quartos[3])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [3]
-    total_valores.append(diarias)
+#     nome= input('Digite um nome: ')
+#     nomes.append (nome)
+#     n = n +1
 
 
+# ## ***ATIVIDADE 2***
 
+# Crie um sistema de notas alunos, com as seguintes operações:
+# ***Utilize While ou for*** 
+# # Sistema de notas de alunos
 
+# - Acesso a conta com condicionais
 
-escolha2 = input(f'Escolha o quarto para o hóspede {cadastro2}: ')
+# - 3 chances de acessar o sistema
 
-if escolha2 == 'Simples':
-    meu_carrinho.append(tipos_quartos[1])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [1]
-    total_valores.append(diarias)
-elif escolha2 == 'Duplo':
-    meu_carrinho.append(tipos_quartos[2])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [2]
-    total_valores.append(diarias)
-elif escolha2 == 'Luxo':
-    meu_carrinho.append(tipos_quartos[3])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [3]
-    total_valores.append(diarias)
+# - Após errar 3 x mensagem que diga que a conta bloqueada 
+# - Inserir notas 
+# - Fazer a média
 
 
 
 
 
 
-escolha3 = input(f'Escolha o quarto para o hóspede {cadastro3} : ')
+nome = 'maria'
+senha = '123'
 
-if escolha3 == 'Simples':
-    meu_carrinho.append(tipos_quartos[1])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [1]
-    total_valores.append(diarias)
-elif escolha3 == 'Duplo':
-    meu_carrinho.append(tipos_quartos[2])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [2]
-    total_valores.append(diarias)
-elif escolha3 == 'Luxo':
-    meu_carrinho.append(tipos_quartos[3])
-    diarias = int(input('Escolha quantas diárias deseja reservar: ' ) )* valores [3]
-    total_valores.append(diarias)
+chances = 3
 
- 
+nota1 = 0
+nota2 = 0
+nota3 = 0
+media = 0
 
-
-
-
-print(f'''Resumo do carrinho:
-      Hospéde: {cadastro1} - Idade: {idade1} - Acomodação: {escolha1} - R$ {total_valores [0]}
-      Hospéde: {cadastro2} - Idade: {idade2} - Acomodação: {escolha2} - R$ {total_valores [1]}
-      Hospéde: {cadastro3} - Idade: {idade3} - Acomodação: {escolha3} - R$ {total_valores [2]}
-           
-      
-
-''')
-
-soma = sum(total_valores)
-
-print('Total:R$', soma )
-
-print(f'''Formas de pagamentos:' 
-                      PIX - ID 1
-                      Cartão de Crédito - ID 2
-                      Boleto - ID 3
-                  ''')
-
-pagamento = input ('Digite a Forma de Pagamento: ' )
+while chances > 0:
+    dig_nome = input('Login: ')
+    dig_senha = input('Senha: ')
+    if dig_nome == nome and dig_senha == senha:
+        print('Bem vindo')
         
-print('Pagamento realizado com sucesso !!!' )
+
+        escolha = input('Deseja inserir nota? sim/não')
+        while escolha == 'sim':
+            nota1 = float(input ("Digite Nota 1: "))
+            nota2 = float(input ('Digite Nota 2: '))
+            nota3 = float(input ('Digite Nota 3: '))
+            break
+            
+        escolha = input('Deseja Calcular a Média? sim/não' )
+        while escolha == 'sim':
+            media = (nota1 + nota2 + nota3 ) / 3
+            break
+
+                
+
+
+
+        print (f'''
+                   Nota 1: {nota1}
+                   Nota 2: {nota2}
+                   Nota 3: {nota3} 
+
+                   Média: {media}
+                                                       
+                   ''')
+        print ('Até Logo')
+        input('Digite enter para sair')
+        break
+
+    else:
+        print('Nome ou Senha Incorretos')
+        chances = chances - 1
+        
+        
+
+else:
+    print('Conta Bloqueada !')
